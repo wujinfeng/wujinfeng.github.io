@@ -5,16 +5,40 @@
   
   <title>hello 吴金锋 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##吴金锋建好一个博客网站.">
+  <meta name="description" content="各大浏览器厂商对es2015功能支持不完全,等到全部支持会等很长时间,如果现在使用es2015,可以选择babel一个将ES6/ES7写的代码转换为ES5代码的编译器.
+我们选择使用gulp自动化编译生成es5代码.
+假设你已经安装过了nodejs.
+配置开发环境:
+
+建立工程目录:  
+1$mkdir test &amp;amp;&amp;amp; cd test
+
+新建工程配置文件package.json">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hello 吴金锋">
 <meta property="og:url" content="http://wujinfeng.github.io/2016/05/18/hello-Hexo/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="##吴金锋建好一个博客网站.">
-<meta property="og:updated_time" content="2016-05-17T16:21:08.445Z">
+<meta property="og:description" content="各大浏览器厂商对es2015功能支持不完全,等到全部支持会等很长时间,如果现在使用es2015,可以选择babel一个将ES6/ES7写的代码转换为ES5代码的编译器.
+我们选择使用gulp自动化编译生成es5代码.
+假设你已经安装过了nodejs.
+配置开发环境:
+
+建立工程目录:  
+1$mkdir test &amp;amp;&amp;amp; cd test
+
+新建工程配置文件package.json">
+<meta property="og:updated_time" content="2016-05-19T06:16:40.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hello 吴金锋">
-<meta name="twitter:description" content="##吴金锋建好一个博客网站.">
+<meta name="twitter:description" content="各大浏览器厂商对es2015功能支持不完全,等到全部支持会等很长时间,如果现在使用es2015,可以选择babel一个将ES6/ES7写的代码转换为ES5代码的编译器.
+我们选择使用gulp自动化编译生成es5代码.
+假设你已经安装过了nodejs.
+配置开发环境:
+
+建立工程目录:  
+1$mkdir test &amp;amp;&amp;amp; cd test
+
+新建工程配置文件package.json">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -85,12 +109,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##吴金锋<br>建好一个博客网站.</p>
+        <p>各大浏览器厂商对es2015功能支持不完全,等到全部支持会等很长时间,如果现在使用es2015,可以选择babel一个将ES6/ES7写的代码转换为ES5代码的编译器.</p>
+<p>我们选择使用gulp自动化编译生成es5代码.</p>
+<p>假设你已经安装过了nodejs.</p>
+<p>配置开发环境:</p>
+<ol>
+<li><p>建立工程目录:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$mkdir</span> <span class="built_in">test</span> &amp;&amp; <span class="built_in">cd</span> <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建工程配置文件package.json </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$npm</span> init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装gulp工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$npm</span> install --save-dev gulp gulp-babel gulp-concat gulp-sourcemaps babel-preset-es2015</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建gulp配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$vim</span> gulpfile.js</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>写入代码gulpfile.js:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">"gulp"</span>);  </span><br><span class="line"><span class="keyword">const</span> sourcemaps = <span class="built_in">require</span>(<span class="string">"gulp-sourcemaps"</span>);  </span><br><span class="line"><span class="keyword">const</span> babel = <span class="built_in">require</span>(<span class="string">"gulp-babel"</span>);  </span><br><span class="line"><span class="keyword">const</span> concat = <span class="built_in">require</span>(<span class="string">"gulp-concat"</span>);    </span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, () =&gt;  </span><br><span class="line">    gulp.src(<span class="string">'src/**/*.js'</span>)  </span><br><span class="line">        .pipe(babel(&#123;  </span><br><span class="line">            presets: <span class="string">'es2015'</span>  </span><br><span class="line">        &#125;))  </span><br><span class="line">        .pipe(gulp.dest(<span class="string">'dist'</span>))  </span><br><span class="line">);    </span><br><span class="line"></span><br><span class="line"><span class="comment">//生成sourcemaps   </span></span><br><span class="line">gulp.task(<span class="string">'all'</span>, () =&gt;  </span><br><span class="line">    gulp.src(<span class="string">'src/**/*.js'</span>)  </span><br><span class="line">        .pipe(sourcemaps.init())  </span><br><span class="line">        .pipe(babel(&#123;  </span><br><span class="line">            presets: <span class="string">'es2015'</span>  </span><br><span class="line">        &#125;))  </span><br><span class="line">        .pipe(concat(<span class="string">'all.js'</span>))  </span><br><span class="line">        .pipe(sourcemaps.write(<span class="string">'.'</span>))  </span><br><span class="line">        .pipe(gulp.dest(<span class="string">'dist'</span>))  </span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>测试是否配置成功<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir src &amp;&amp; <span class="built_in">cd</span> src &amp;&amp; vim app.js</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>写入代码:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;   </span><br><span class="line">      <span class="keyword">let</span> x;  </span><br><span class="line">      &#123;  </span><br><span class="line">        <span class="comment">// okay, block scoped name  </span></span><br><span class="line">        <span class="keyword">const</span> x = <span class="string">"sneaky"</span>;  </span><br><span class="line">        <span class="comment">// error, const  </span></span><br><span class="line">        <span class="comment">//x = "foo";  </span></span><br><span class="line">        <span class="built_in">console</span>.log(x);  </span><br><span class="line">      &#125;  </span><br><span class="line">      <span class="comment">// okay, declared with `let`  </span></span><br><span class="line">      x = <span class="string">"bar"</span>;  </span><br><span class="line">      <span class="comment">// error, already declared in block  </span></span><br><span class="line">      <span class="comment">//let x = "inner";  </span></span><br><span class="line">      <span class="built_in">console</span>.log(x);  </span><br><span class="line">  &#125;   </span><br><span class="line">  f();</span><br><span class="line"><span class="string">``</span><span class="string">` </span><br><span class="line"></span><br><span class="line">6.执行</span><br><span class="line"></span><br><span class="line">`</span><span class="string">``</span> bash</span><br><span class="line">$gulp</span><br></pre></td></tr></table></figure></p>
+<p>会自动生成dest目录,包含app.js文件,是转化过的js.恭喜你已经学会!</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wujinfeng.github.io/2016/05/18/hello-Hexo/" data-id="ciobnjtyz0001ac1q2pxh2dgu" class="article-share-link">Share</a>
+      <a data-url="http://wujinfeng.github.io/2016/05/18/hello-Hexo/" data-id="ciodwum610001cx1qxwwm0j6q" class="article-share-link">Share</a>
       
       
     </footer>
